@@ -68,7 +68,7 @@ func (self *Drive) Upload(args UploadArgs) error {
 			return err
 		}
 
-		fmt.Fprintf(args.Out, "File is readable by anyone at %s\n", f.WebContentLink)
+		fmt.Fprintf(args.Out, "%s\n", f.WebContentLink)
 	}
 
 	if args.Delete {
@@ -257,7 +257,7 @@ func (self *Drive) UploadStream(args UploadStreamArgs) error {
 			return err
 		}
 
-		fmt.Fprintf(args.Out, "File is readable by anyone at %s\n", f.WebContentLink)
+		fmt.Fprintf(args.Out, " %s\n", f.WebContentLink)
 	}
 	return nil
 }
